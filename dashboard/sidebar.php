@@ -47,9 +47,9 @@
      <li>
        <a href="#">
          <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
+         <span class="links_name">Chat</span>
        </a>
-       <span class="tooltip">Messages</span>
+       <span class="tooltip">Chat</span>
      </li>
      <li>
        <a href="#">
@@ -90,12 +90,13 @@
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
-             <div class="name">AD</div>
-             <div class="job">Web designer</div>
+             <div class="name">Log Out</div>
+             <div class="job">BrainCare</div>
            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" >
-         </i>
+         <a href="./logout.php"><i class='bx bx-log-out' id="log_out" style="cursor:pointer">
+         </i></a>
+         
      </li>
     </ul>
   </div>

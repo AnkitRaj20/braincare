@@ -85,6 +85,8 @@
     
     <!-- Custom styles for this template -->
     <link href="sidebars.css" rel="stylesheet">
+    <link href="chat.css" rel="stylesheet">
+    <link href="user.css" rel="stylesheet">
   </head>
   <body>
     

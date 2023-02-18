@@ -3,6 +3,14 @@ session_start();
 include("./sidebar.php");
 include("../connection/config.php");
 
+// If Not logged in
+if($_SESSION['isLoggedIn'] != 'login'){
+    ?>
+        <script>
+            window.location.href="../loginForm.php";
+        </script>
+    <?php
+}
 $id = $_SESSION['id'];
 $email=$_SESSION['email'];
 

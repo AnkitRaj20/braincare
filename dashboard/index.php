@@ -10,6 +10,8 @@
         </div>
 
         <div class="col-md-8">
-            row 2
+        <?php 
+            include("user.php");
+           ?>
         </div>
     </div>

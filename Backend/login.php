@@ -16,7 +16,7 @@ $num = mysqli_num_rows($result);
 if($num==1){
      while($row=mysqli_fetch_array($result)){
     if(mysqli_num_rows($result)>0){
-        $_SESSION['isLoggedIn'] = true;
+        $_SESSION['isLoggedIn'] = 'login';
 
         // Fetching id and email from db
         $_SESSION['id'] = $row['id'];
