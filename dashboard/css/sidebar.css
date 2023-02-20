@@ -1,4 +1,4 @@
-/*  */
+
 
 /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -245,8 +245,104 @@
   font-weight: 500;
   margin: 18px
 }
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
   }
+} */
+
+/* For screens with a maximum width of 600px */
+/* @media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .sidebar.open {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .logo-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .logo-details .logo_name {
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 80%;
+  }
+  .nav-list li {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-list li a .links_name {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    background-color: #c7bfbf;
+    border-radius: 5px;
+  }
+  .profile {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile .profile-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile .profile-details .name_job {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .profile .profile-details .name_job .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .profile .profile-details .name_job .job {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+  }
+  .profile .profile-details #log_out {
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
 }
+
+ */

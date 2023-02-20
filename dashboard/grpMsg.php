@@ -6,12 +6,22 @@
 
 <h2>Chat Messages - <?php echo $roomname; ?> </h2>
 
+<style>
+    .container{
+        background-color: #11101D;
+        color: #fff;
+        overflow: hidden;
+    }
+</style>
+<section class="grp">
+
+
 <div class="container">
     <div class="scroll">
-  <!-- <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+<!-- <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
   <p>Hello. How are you today?</p>
-  <span class="time-right">11:00</span>
-   -->
+  <span class="time-right">11:00</span> -->
+ 
 </div>
     
 </div>
@@ -20,6 +30,7 @@
 
 <button type="button" class="btn btn-primary mt-3" name="submit" id="submit">Send</button>
 
+</section>
 
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 

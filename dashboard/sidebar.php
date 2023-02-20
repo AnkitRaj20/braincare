@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -18,6 +17,8 @@
    <link rel="stylesheet" href="./css/user.css">
     </head>
 <body>
+  
+<!-- <button class="hamburger"><i class='bx bx-menu'></i></button> -->
   <div class="sidebar mr-5">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus icon'></i>
@@ -45,11 +46,35 @@
        <span class="tooltip">User</span>
      </li>
      <li>
-       <a href="#">
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=GroupMessage">
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chat</span>
        </a>
        <span class="tooltip">Chat</span>
+     </li>
+     <li>
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=student">
+        
+       <i class='bx bxs-graduation'></i>
+         <span class="links_name">Student</span>
+       </a>
+       <span class="tooltip">Student</span>
+     </li>
+     <li>
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=boys">
+        
+       <i class='bx bx-male'></i>
+         <span class="links_name">Boys</span>
+       </a>
+       <span class="tooltip">Boys</span>
+     </li>
+     <li>
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=girls">
+        
+       <i class='bx bx-female' ></i>
+         <span class="links_name">Girls</span>
+       </a>
+       <span class="tooltip">Girls</span>
      </li>
      <li>
        <a href="#">
@@ -64,8 +89,8 @@
          <span class="links_name">File Manager</span>
        </a>
        <span class="tooltip">Files</span>
-     </li>
-     <li>
+     </li>     
+     <!-- <li>
        <a href="#">
          <i class='bx bx-cart-alt' ></i>
          <span class="links_name">Order</span>
@@ -85,7 +110,7 @@
          <span class="links_name">Setting</span>
        </a>
        <span class="tooltip">Setting</span>
-     </li>
+     </li> -->
      <li class="profile">
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->
@@ -104,6 +129,13 @@
       <div class="text">Dashboard</div>
   </section> -->
   <script>
+//     const hamburger = document.querySelector(".hamburger");
+// const navLinks = document.querySelector(".sidebar");
+
+// hamburger.addEventListener("click", () => {
+//   navLinks.classList.toggle("open");
+// });
+
     
 //     function logout(){
 //       alert('Logged out');
