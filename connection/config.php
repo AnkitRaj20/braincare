@@ -1,4 +1,10 @@
 <?php
+// $servername = "bwzjk0lngsyrgtm0fjdy-mysql.services.clever-cloud.com";
+// $username = "uc6nyiamyftuq7ll";
+// $password = "F7cBKFwYXSVcoDz1O4Tr";
+// $dbname = "bwzjk0lngsyrgtm0fjdy";
+
+
 $servername = "localhost";
 $username = "root";
 $password = "";

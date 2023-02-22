@@ -21,23 +21,23 @@
 <!-- <button class="hamburger"><i class='bx bx-menu'></i></button> -->
   <div class="sidebar mr-5">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">dashboard</div>
+      <i class='bx bx-brain icon'></i>
+        <div class="logo_name">BrainCare</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
       <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
+          <!-- <i class='bx bx-search' ></i> -->
+         <!-- <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span> -->
       </li>
       <li>
-        <a href="#">
+        <!-- <a href="#">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
-      </li>
+      </li> -->
       <li>
        <a href="./user.php">
          <i class='bx bx-user' ></i>
@@ -77,19 +77,34 @@
        <span class="tooltip">Girls</span>
      </li>
      <li>
-       <a href="#">
-         <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=girls">
+        
+       <i class='bx bx-body'></i>
+         <span class="links_name">Transgender</span>
        </a>
-       <span class="tooltip">Analytics</span>
+       <span class="tooltip">Transgender</span>
      </li>
      <li>
        <a href="#">
-         <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
+         <i class='bx bx-book' ></i>
+         <span class="links_name">Stories</span>
        </a>
-       <span class="tooltip">Files</span>
-     </li>     
+       <span class="tooltip">Stories</span>
+     </li>
+     <li>
+       <a href="./events.php">
+       <i class='bx bx-video-recording' ></i>
+         <span class="links_name">Create Events</span>
+       </a>
+       <span class="tooltip">Create Events</span>
+     </li>         
+     <li>
+       <a href="./showLink.php">
+       <i class='bx bx-video-recording' ></i>
+         <span class="links_name">join Events</span>
+       </a>
+       <span class="tooltip">join Events</span>
+     </li>         
      <!-- <li>
        <a href="#">
          <i class='bx bx-cart-alt' ></i>

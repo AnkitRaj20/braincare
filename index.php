@@ -69,10 +69,12 @@
                         <h1 class="display-5 text-white mb-4">
                             Mental Health Matters a lot
                         </h1>
-                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                        <p class="text-white mb-0">Mental health is essential for overall well-being and plays a significant role in our ability to cope with the challenges of life, maintain healthy relationships, and achieve our goals. Mental health encompasses our emotional, psychological, and social well-being and affects how we think, feel, and act.
+
+Good mental health enables us to manage stress, build resilience, and maintain a positive outlook on life. On the other hand, poor mental health can lead to a range of issues, such as anxiety, depression, and other mental illnesses, which can have a significant impact on our lives.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                         <h1 class="text-white mb-4">Make Appointment</h1>
                         <form>
@@ -119,7 +121,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -127,7 +129,7 @@
 
 
     <!-- Education -->
-    <div include-html="Component/education.html" id="eaducation">
+    <div include-html="Component/education.php" id="eaducation">
     
     </div>
 

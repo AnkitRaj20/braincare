@@ -1,0 +1,27 @@
+.events .container{
+    border-radius: 61px;
+    width: 25rem;
+    background: #e0e0e0;
+    box-shadow:  24px 24px 49px #b1b1b1,
+                 -24px -24px 49px #ffffff;
+}
+
+.profile-button {
+    background: #11101D;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}

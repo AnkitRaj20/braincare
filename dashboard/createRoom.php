@@ -12,7 +12,7 @@ include("./sidebar.php");
         <form action="backend/create.php" method="POST">
             <div class="mb-3">
             <label for="ChatRoom" class="form-label">ChatRoom Name</label>
-            <input type="text" placeholder="Enter Room Name" class="form-control"  name="room">
+            <input type="text" placeholder="Enter Room Name" class="form-control"  name="room" required>
             <button class="btn btn-outline-primary" href="#">Create Room</button>
 
         </form>

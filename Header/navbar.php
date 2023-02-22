@@ -12,7 +12,7 @@
                 <a href="<?php echo $actual_link . $dir_path . '/index.php'; ?>" class="nav-item nav-link active">Home</a>
                 <a href="<?php echo $actual_link . $dir_path . '/about.php'; ?>" class="nav-item nav-link">About</a>
                 <a href="<?php echo $actual_link . $dir_path . '/service.php'; ?>" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
                         <a href="<?php echo $actual_link . $dir_path . '/price.php'; ?>" class="dropdown-item">Pricing Plan</a>
@@ -20,12 +20,12 @@
                         <a href="<?php echo $actual_link . $dir_path . '/testimonial.php'; ?>" class="dropdown-item">Testimonial</a>
                         <a href="<?php echo $actual_link . $dir_path . '/appointment.php'; ?>" class="dropdown-item">Appointment</a>
                     </div>
-                </div>
+                </div> -->
                 <a href="<?php echo $actual_link . $dir_path . '/registerForm.php'; ?>" class="nav-item nav-link">Register</a>
                 <a href="<?php echo $actual_link . $dir_path . '/contact.php'; ?>" class="nav-item nav-link">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="<?php echo $actual_link . $dir_path . '/appointment.php'; ?>" class="btn btn-primary py-2 px-4 ms-3">Take Test</a>
+            <!-- <a href="<?php echo $actual_link . $dir_path . '/appointment.php'; ?>" class="btn btn-primary py-2 px-4 ms-3">Take Test</a> -->
 
             <a href="<?php echo $actual_link . $dir_path . '/loginForm.php'; ?>" class="btn btn-outline-success py-2 px-4 ms-3">Login</a>
         </div>
