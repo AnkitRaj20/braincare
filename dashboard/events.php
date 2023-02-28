@@ -15,10 +15,10 @@ include("./sidebar.php");
                     <label for="exampleInputEmail1" class="form-label">For:</label>
                     <select class="form-control"  aria-label="Default select example" name="for" required>
                         <option value="all" selected >All</option>
-                        <option value="students">Students</option>
-                        <option value="male">Boys Only</option>
-                        <option value="female">Girls Only</option>
-                        <option value="female">TransGender</option>
+                        <option value="student">Students</option>
+                        <option value="boys">Boys Only</option>
+                        <option value="girls">Girls Only</option>
+                        <option value="transgender">TransGender</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -28,6 +28,10 @@ include("./sidebar.php");
                 <div class="mb-3">
                     <label for="duration" class="form-label">Duration</label>
                     <input type="number" class="form-control" name="duration" id="duration" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
                 </div>
                 <div class="mb-3">
                     <label for="date" class="form-label">Date</label>

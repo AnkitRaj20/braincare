@@ -1,3 +1,26 @@
+<?php 
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
+//  connection
+include("../connection/config.php");
+
+// If Not logged in
+$id = $_SESSION['id'];
+
+$sql = "SELECT * FROM `register` WHERE id= $id";
+$result=mysqli_query($conn,$sql);
+$num=mysqli_num_rows($result);
+
+if($num>0){
+  while($row=mysqli_fetch_array($result)){
+    $gender = $row['gender'];
+    $occupation = $row['occupation'];
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -52,6 +75,9 @@
        </a>
        <span class="tooltip">Chat</span>
      </li>
+     <?php 
+      if($occupation === 'student'){      
+     ?>
      <li>
        <a href="http://localhost/braincare/dashboard/room.php?roomname=student">
         
@@ -60,6 +86,11 @@
        </a>
        <span class="tooltip">Student</span>
      </li>
+     <?php 
+     }
+
+     if($gender === 'male'){
+     ?>
      <li>
        <a href="http://localhost/braincare/dashboard/room.php?roomname=boys">
         
@@ -68,6 +99,11 @@
        </a>
        <span class="tooltip">Boys</span>
      </li>
+     <?php 
+     }
+     if($gender === 'female'){
+
+     ?>
      <li>
        <a href="http://localhost/braincare/dashboard/room.php?roomname=girls">
         
@@ -76,14 +112,21 @@
        </a>
        <span class="tooltip">Girls</span>
      </li>
+     <?php 
+     }
+     if($gender === 'transgender'){
+     ?>
      <li>
-       <a href="http://localhost/braincare/dashboard/room.php?roomname=girls">
+       <a href="http://localhost/braincare/dashboard/room.php?roomname=transgender">
         
        <i class='bx bx-body'></i>
          <span class="links_name">Transgender</span>
        </a>
        <span class="tooltip">Transgender</span>
      </li>
+     <?php 
+     }
+     ?>
      <li>
        <a href="#">
          <i class='bx bx-book' ></i>

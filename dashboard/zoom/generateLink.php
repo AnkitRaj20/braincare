@@ -9,11 +9,12 @@ $for=$_POST['for'];
 $topic=$_POST['topic'];
 $duration=$_POST['duration'];
 $date=$_POST['date'];
+$password=$_POST['password'];
 
 $arr['for']=$for;
 $arr['topic']=$topic;
 $arr['start_date']=date('Y-m-d h:i:s',strtotime($date));
-$arr['password']="ankit";
+$arr['password']=$password;
 // 2 for schedule meeting
 $arr['type'] = '2';
 

@@ -5,6 +5,11 @@ body {
     max-width: 800px;
     padding: 0 20px;
   }
+  /* .container{
+    
+} */
+
+
   
   .container {
     border: 2px solid #dedede;
@@ -12,6 +17,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
+ 
   }
   
   .darker {
@@ -76,10 +82,6 @@ body {
     color: #fff;
     text-decoration: none;
   }
-  
-  /*
-   * Dummy devices (replace them with your own or something else entirely!)
-   */
   
   .product-device {
     position: absolute;
