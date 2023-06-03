@@ -11,7 +11,7 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="<?php echo $actual_link . $dir_path . '/index.php'; ?>" class="nav-item nav-link active">Home</a>
                 <a href="<?php echo $actual_link . $dir_path . '/about.php'; ?>" class="nav-item nav-link">About</a>
-                <a href="<?php echo $actual_link . $dir_path . '/service.php'; ?>" class="nav-item nav-link">Service</a>
+                <a href="<?php echo $actual_link . $dir_path . '/education.php'; ?>" class="nav-item nav-link">Education</a>
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">

@@ -3,56 +3,43 @@
  include("./Component/carousel.php");
 ?>
 </div>
-   <!-- Banner Start -->
-    <div class="container-fluid banner mb-5">
+  <!-- Banner Start -->
+  <div class="container-fluid banner mb-5">
         <div class="container">
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
                     <div class="bg-primary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Opening Hours</h3>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Mon - Fri</h6>
-                            <p class="mb-0"> 8:00am - 9:00pm</p>
+                        <h3 class="text-white mb-3">Stress</h3>
+                        <div class="d-flex justify-content-between text-white mb-9">
+                        
+                            <p class="mb-0">Stress can be defined as a state of worry or mental tension caused by a difficult situation. Stress is a natural human response that prompts us to address challenges and threats in our lives. Everyone experiences stress to some degree.</p>
                         </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Saturday</h6>
-                            <p class="mb-0"> 8:00am - 7:00pm</p>
-                        </div>
-                        <div class="d-flex justify-content-between text-white mb-3">
-                            <h6 class="text-white mb-0">Sunday</h6>
-                            <p class="mb-0"> 8:00am - 5:00pm</p>
-                        </div>
-                        <a class="btn btn-light" href="">Appointment</a>
+                        
+                        <!-- <a class="btn btn-light" href="">Learn more</a> -->
                     </div>
                 </div>
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
                     <div class="bg-dark d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Search A Doctor</h3>
-                        <div class="date mb-3" id="date" data-target-input="nearest">
-                            <input type="text" class="form-control bg-light border-0 datetimepicker-input"
-                                placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style="height: 40px;">
+                        <h3 class="text-white mb-3">Depression</h3>
+                        <div class="d-flex justify-content-between text-white mb-9">
+                        
+                            <p class="mb-0">One of the most common mental health disorders someone might struggle with is depression </p>
                         </div>
-                        <select class="form-select bg-light border-0 mb-3" style="height: 40px;">
-                            <option selected>Select A Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
-                        </select>
-                        <a class="btn btn-light" href="">Search Doctor</a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-secondary d-flex flex-column p-5" style="height: 300px;">
-                        <h3 class="text-white mb-3">Make Appointment</h3>
-                        <p class="text-white">Ipsum erat ipsum dolor clita rebum no rebum dolores labore, ipsum magna at eos et eos amet.</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
+                        <h3 class="text-white mb-3">Anxiety</h3>
+                        <p class="text-white">Anxiety refers to anticipation of a future concern and is more associated with muscle tension and avoidance behavior.
+
+                     Fear is an emotional response to an immediate threat and is more associated with a fight or flight reaction – either staying to fight or leaving to escape danger.</p>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Banner Start -->
-
 
    <!-- About -->
    <?php
@@ -137,32 +124,32 @@ Good mental health enables us to manage stress, build resilience, and maintain a
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row g-5 mb-5">
-                <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
+                <!-- <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
                     <div class="twentytwenty-container position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/before.jpg" style="object-fit: cover;">
-                        <img class="position-absolute w-100 h-100" src="img/after.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/together.jpeg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/together.jpg" style="object-fit: cover;">
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-7">
                     <div class="section-title mb-5">
-                        <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Services</h5>
-                        <h1 class="display-5 mb-0">We Offer The Best Quality Dental Services</h1>
+                        <h5 class="position-relative d-inline-block text-primary text-uppercase">You are not alone</h5>
+                        <h1 class="display-5 mb-0"></h1>
                     </div>
                     <div class="row g-5">
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-1.jpg" alt="">
+                                <img class="img-fluid" src="img/talk.jpeg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Cosmetic Dentistry</h5>
+                                <h5 class="m-0">Let's Talk</h5>
                             </div>
                         </div>
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-2.jpg" alt="">
+                                <img class="img-fluid" src="img/together.jpeg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Dental Implants</h5>
+                                <h5 class="m-0">Student Talk</h5>
                             </div>
                         </div>
                     </div>
@@ -173,18 +160,18 @@ Good mental health enables us to manage stress, build resilience, and maintain a
                     <div class="row g-5">
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-3.jpg" alt="">
+                                <img class="img-fluid" src="img/girls-talk.jpeg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Dental Bridges</h5>
+                                <h5 class="m-0">Girl's Talk</h5>
                             </div>
                         </div>
                         <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                             <div class="rounded-top overflow-hidden">
-                                <img class="img-fluid" src="img/service-4.jpg" alt="">
+                                <img class="img-fluid" src="img/mens-talk.jpeg" alt="">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
-                                <h5 class="m-0">Teeth Whitening</h5>
+                                <h5 class="m-0">Men's Talk</h5>
                             </div>
                         </div>
                     </div>
@@ -203,7 +190,7 @@ Good mental health enables us to manage stress, build resilience, and maintain a
 
 
     <!-- Offer Start -->
-    <div class="container-fluid bg-offer my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-offer my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7 wow zoomIn" data-wow-delay="0.6s">
@@ -216,7 +203,7 @@ Good mental health enables us to manage stress, build resilience, and maintain a
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Offer End -->
 
 

@@ -1,50 +1,68 @@
  <!-- Education Start -->
  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-5">
+     <div class="container">
+         <div class="row g-5">
 
-            <div class="section-title mb-4">
-                <h5 class="position-relative d-inline-block text-primary text-uppercase">Education</h5>
-            </div>
+             <div class="section-title mb-4">
+                 <h5 class="position-relative d-inline-block text-primary text-uppercase">Education</h5>
+             </div>
 
-            <!-- 1st -->
-            <div class="col-lg-7">
-                <h1 class="display-5 mb-0">Education1</h1>
-               
-                <h4 class="text-body fst-italic mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</h4>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                <!-- <div class="row g-3">
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Award Winning</h5>
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Professional Staff</h5>
-                    </div>
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>24/7 Opened</h5>
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Fair Prices</h5>
-                    </div>
-                </div> -->
-                <!-- <a href="appointment.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Make Appointment</a> -->
-            </div>
-            <div class="col-lg-5" style="min-height: 20rem;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
-                </div>
-            </div>
-            
-            <!-- 2nd -->
-            <div class="col-lg-5" style="min-height: 20rem;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <h1 class="display-5 mb-0">Education2</h1>
+             <!-- 1st -->
+             <div class="col-lg-7">
+                 <h1 class="display-5 mb-0">Stress</h1>
+
+                 <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+
+             </div>
+             <div class="col-lg-5" style="min-height: 20rem;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/stress.jpeg" style="object-fit: cover;">
+                 </div>
+             </div>
+
+             <!-- 2nd -->
+             <div class="col-lg-5" style="min-height: 20rem;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/depression.jpeg" style="object-fit: cover;">
+                 </div>
+             </div>
+             <div class="col-lg-7">
+                 <h1 class="display-5 mb-0">Depression</h1>
                  <p class="text-body fst-italic mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia cumque, ea accusantium distinctio molestiae error, illo delectus, aut commodi voluptatibus repellat sint laboriosam quam iure quae quia temporibus blanditiis autem.
+                     Major depressive disorder or clinical depression has varying forms. It affects the way a person thinks, feels or functions. It’s about more than feeling sad once in a while — depression is persistent and includes symptoms like extreme low moods, difficulty concentrating, anxiety, exhaustion and social withdrawal. Symptoms vary from person to person. Psychotic depression can also include delusions or hallucinations. With support and sometimes medication, those with depression can live rich, fulfilling lives.
                  </p>
-            </div>
+             </div>
 
-        </div>
-    </div>
-</div>
-<!-- Education End -->
+             <!-- 3rd -->
+             <div class="col-lg-7">
+                 <h1 class="display-5 mb-0">Anxiety</h1>
+
+                 <p class="text-body fst-italic mb-4">
+                     While anyone can experience anxiety from time to time, those with anxiety disorders experience persistent, excessive worry. Symptoms can include restlessness, fatigue, trouble concentrating, irritability, muscle tension and sleep problems. Panic disorders and phobias fall under the category of anxiety. Anxiety disorders are very common. About 31% of adults experience an anxiety disorder at some point in their lives. Helpful treatments can include talk therapy, medications, relaxation techniques and exercise.
+                 </p>
+
+             </div>
+             <div class="col-lg-5" style="min-height: 20rem;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/anxiety.jpeg" style="object-fit: cover;">
+                 </div>
+             </div>
+
+             <!-- 4th -->
+             <div class="col-lg-5" style="min-height: 20rem;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/ptsd.jpeg" style="object-fit: cover;">
+                 </div>
+             </div>
+             <div class="col-lg-7">
+                 <h1 class="display-5 mb-0">Post-Traumatic Stress Disorder (PTSD)</h1>
+                 <p class="text-body fst-italic mb-4">
+
+                     The prevalence of PTSD and other mental disorders is high in conflict-affected settings (3). PTSD may develop following exposure to an extremely threatening or horrific event or series of events. It is characterised by all of the following: 1) re-experiencing the traumatic event or events in the present (intrusive memories, flashbacks, or nightmares); 2) avoidance of thoughts and memories of the event(s), or avoidance of activities, situations, or people reminiscent of the event(s); and 3) persistent perceptions of heightened current threat. These symptoms persist for at least several weeks and cause significant impairment in functioning. Effective psychological treatment exists.
+                 </p>
+             </div>
+
+         </div>
+     </div>
+ </div>
+ <!-- Education End -->
