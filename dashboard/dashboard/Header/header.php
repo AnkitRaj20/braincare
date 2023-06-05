@@ -25,6 +25,7 @@ include("../../connection/config.php");
           $userType = $row['userType'];
           $gender = $row['gender'];
           $occupation = $row['occupation'];
+          $_SESSION['name'] = $row['firstName'].$row['middleName'].$row['lastName'];
          
       }
     }
@@ -73,6 +74,14 @@ include("../../connection/config.php");
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+
+
+  <!-- DataTables -->
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap4.min.css">
+
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body class="">
@@ -169,6 +178,19 @@ include("../../connection/config.php");
             </a>
           </li>
           <?php } ?>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="./createMeeting.php">
+              <i class="material-icons">event</i>
+              <p>Create Events</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./viewMeeting.php">
+              <i class="material-icons">links</i>
+              <p>Join Events</p>
+            </a>
+          </li>
           
           <!-- <li class="nav-item ">
             <a class="nav-link" href="./typography.php">

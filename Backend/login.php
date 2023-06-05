@@ -11,7 +11,6 @@ $result = mysqli_query($conn,$sql);
 $num = mysqli_num_rows($result);
 
 
-
 if($num==1){
      while($row=mysqli_fetch_array($result)){
 
@@ -25,6 +24,7 @@ if($num==1){
                 $_SESSION['gender'] = $row['gender'];
                 $_SESSION['email'] = $row['email'];
                 header('location: ../dashboard/dashboard/user.php');
+                // header('location: ../dashboard1/user.php');
             }
 
     // }

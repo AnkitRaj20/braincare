@@ -1,9 +1,9 @@
 <?php 
+include("../../../connection/config.php");
 include("./api.php");
 include("./config.php");
 
 
-include("../../../connection/config.php");
 
 $for=$_POST['for'];
 $topic=$_POST['topic'];
@@ -11,19 +11,33 @@ $duration=$_POST['duration'];
 $date=$_POST['date'];
 $password=$_POST['password'];
 
+echo $date;
+
+$datetimeValue = $date;
+$datetime = new DateTime($datetimeValue);
+
+// Output the formatted datetime
+$newDate = $datetime->format('Y-m-d H:i:s');
+echo $newDate;
+
 $arr['for']=$for;
 $arr['topic']=$topic;
-$arr['start_date']=date('Y-m-d h:i:s',strtotime($date));
+$arr['start_date']=$newDate;
 $arr['password']=$password;
+$arr['duration']=$duration;
 // 2 for schedule meeting
 $arr['type'] = '2';
+
+
 
 $result = createMeeting($arr);
 
 $data = json_encode($result);
-echo($data);
+// echo($data);
+
 
 if(isset($result->id)){
+    print_r($result);
     $url = $result->join_url;
     $time = $result->duration;
     $pass=$result->password;
@@ -33,7 +47,7 @@ if(isset($result->id)){
 
     echo '<Pre>';
     echo "Topic".$result->topic."<br/>";
-    // echo "For".$result->for."<br/>";
+    echo "For".$result->for."<br/>";
     echo "Join URL:".$result->join_url."<br/>";
     echo "Duration:".$result->duration."<br/>";
     echo "Password:".$result->password."<br/>";
@@ -45,9 +59,9 @@ if(isset($result->id)){
  }
 
 
- $sql="INSERT INTO `meetings` (`usedFor`, `topic`, `url`, `duration`, `password`, `date`) VALUES ('$for', '$topic', '$url', '$time', '$pass', '$start');";
+ $sql="INSERT INTO `meetings` (`usedFor`, `topic`, `url`, `duration`, `password`, `date`) VALUES ('$for', '$topic', '$url', '$time', '$pass', '$newDate');";
 
- echo $sql;
+//  echo $sql;
 
 //  mysqli_query($conn, $sql);
 
@@ -62,6 +76,14 @@ if(isset($result->id)){
     <?php
     // Free result set
     // mysqli_free_result($result);
+  }else{
+    echo "error".$conn->error;
+    ?>
+    <script>
+        console.log("not working");
+        alert("not working");
+    </script>
+    <?php
   }
 
   

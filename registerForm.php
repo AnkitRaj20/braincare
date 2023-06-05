@@ -75,7 +75,7 @@ include("./Header/header.php");
                         <div class="col-6">
                             <label for="gender:" class="form-label">Gender</label><br />
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="boys" value="male" checked required>
+                                <input class="form-check-input" type="radio" name="gender" id="boys" value="boys" checked required>
                                 <label class="form-check-label" for="inlineRadio1">Male</label>
                             </div>
                             <div class="form-check form-check-inline">

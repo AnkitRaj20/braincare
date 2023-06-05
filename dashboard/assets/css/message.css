@@ -1,8 +1,3 @@
-.msg{
-  overflow-y: scroll;
-  overflow: hidden;
-  height: 1rem;
-}
 .message {
     border: 2px solid #dedede;
     background-color: #f1f1f1;
@@ -48,7 +43,7 @@
   }
   
   .scroll{
-    height: 280px;
-    /* overflow-y: scroll; */
-    overflow-y: auto;
+    height: 380px;
+    overflow-y: scroll;
+    /* overflow-y: auto; */
 }
