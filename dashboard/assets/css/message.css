@@ -4,11 +4,17 @@
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
+    background-color: transparent;
   }
 
   .darker {
+    margin: 10px 0;
     border-color: #ccc;
-    background-color: #ddd;
+    color: #fff;
+    background-color: #4F709C;
+    /* background-color: #ddd; */
+    /* display: flex; */
+    text-align: end;  
   }
 
   

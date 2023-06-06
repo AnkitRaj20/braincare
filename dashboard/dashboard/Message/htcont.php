@@ -7,7 +7,7 @@ include "../../../connection/config.php";
  $sql ="SELECT * FROM msgs WHERE room='$room'";
  $id = $_SESSION['id'];
 
- echo $_SESSION['name'];
+//  echo $_SESSION['name'];
 
  $res="";
  $result=mysqli_query($conn,$sql);
@@ -15,13 +15,22 @@ include "../../../connection/config.php";
  if(mysqli_num_rows($result)>0){
     while($row=mysqli_fetch_assoc($result)){
         $name = $row['name'];
-
-        // if($)
         $newDate = date("d-m-Y", strtotime($row['stime']));
-        $res= $res . '<div class="message">';
-        $res = $res . $row['ip'];
-        $res = $res ." says <p>". $row['msg'];
-        $res = $res ." </p><span class='time-right'>" . $newDate . "</span></div>";
+
+        if($name == $_SESSION['name']){
+            $res= $res . '<div class="message darker">';
+            // $res = $res . $row['ip'];
+            $res = $res . $name;
+            $res = $res ." says <p>". $row['msg'];
+            $res = $res ." </p><span class='time-right'>" . $newDate . "</span></div>";
+        }
+        else{
+            $res= $res . '<div class="message">';
+            $res = $res . $row['ip'];
+            $res = $res ." says <p>". $row['msg'];
+            $res = $res ." </p><span class='time-right'>" . $newDate . "</span></div>";
+        }
+       
 
     }
  }

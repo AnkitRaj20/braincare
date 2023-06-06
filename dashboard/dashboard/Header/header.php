@@ -180,6 +180,12 @@ include("../../connection/config.php");
           <?php } ?>
 
           <li class="nav-item ">
+            <a class="nav-link" href="./stories.php">
+              <i class="material-icons">book</i>
+              <p>Stories</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="./createMeeting.php">
               <i class="material-icons">event</i>
               <p>Create Events</p>

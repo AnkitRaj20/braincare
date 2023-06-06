@@ -31,7 +31,7 @@ if($num==1){
  }
 }else{
     
-    echo " error". mysqli_error($conn);
+    echo " error". $conn->error;
 }
 
 ?>
