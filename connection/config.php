@@ -18,3 +18,8 @@ if($conn->connect_error){
 // echo "Connection Successful."
 
 ?>
+
+
+<!--client -id:: 800485698469-lgka5r141coloe78aor0ojmcjr9m2fjo.apps.googleusercontent.com -->
+
+<!-- client secret:: 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 -->

@@ -26,12 +26,26 @@ if($num==1){
                 header('location: ../dashboard/dashboard/user.php');
                 // header('location: ../dashboard1/user.php');
             }
+            $_SESSION['msg'] = "Incorrect username or password";
+    ?>
+                  <script> 
+                //   alert("Wrong Email Id or Password");
+                  location.replace("../loginForm.php");
+                  </script>
+                 
+                <?php
 
-    // }
+  
  }
 }else{
-    
-    echo " error". $conn->error;
+    $_SESSION['msg'] = "Incorrect username or password";
+    ?>
+                  <script> 
+                //   alert("Wrong Email Id or Password");
+                  location.replace("../loginForm.php");
+                  </script>
+                 
+                <?php
 }
 
 ?>

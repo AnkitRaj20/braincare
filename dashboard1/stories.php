@@ -169,6 +169,11 @@ h3{
 
           </div>
           <div class="form_item">
+              <label>Middle Name</label>
+              <input type="text" name="firstName" required>
+
+          </div>
+          <div class="form_item">
               <label>Last Name</label>
               <input type="text" name="lastName" required>
 
@@ -182,23 +187,17 @@ h3{
           </div>
       </div>
       <div class="form_wrap form_grp">
-          
+
           <div class="form_item">
               <label>Message</label>
               <textarea cols="50"name="message" required></textarea>
-
           </div>
-      </div>
-      
-     
+      </div>     
       <div class="btn">
         <input type="submit" value="Share">
       </div>
-    </form>
-
-    
-  </div>
-  
+    </form>    
+  </div>  
 </div>
 
 <?php 

@@ -25,7 +25,7 @@ include("../../connection/config.php");
           $userType = $row['userType'];
           $gender = $row['gender'];
           $occupation = $row['occupation'];
-          $_SESSION['name'] = $row['firstName'].$row['middleName'].$row['lastName'];
+          $_SESSION['name'] = $row['firstName']." ".$row['middleName']." ".$row['lastName'];
          
       }
     }
@@ -62,6 +62,7 @@ include("../../connection/config.php");
 
   <!-- Message CSS -->
   <link href="../assets/css/message.css" rel="stylesheet" />
+  <link href="../assets/css/stories.css" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="../../assets/css/message.css"> -->
 
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -113,8 +114,6 @@ include("../../connection/config.php");
           </li>
 
           <?php if($userType === 'admin'){ ?>
-         
-          
           <li class="nav-item ">
             <a class="nav-link" href="./allUsers.php">
               <i class="material-icons">content_paste</i>
@@ -179,6 +178,12 @@ include("../../connection/config.php");
           </li>
           <?php } ?>
 
+          <li class="nav-item ">
+            <a class="nav-link" href="./shareStory.php">
+              <i class="material-icons">create</i>
+              <p>Share Stories</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="./stories.php">
               <i class="material-icons">book</i>

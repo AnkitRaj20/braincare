@@ -41,7 +41,6 @@
 header('location:http://localhost/braincare/dashboard/dashboard/user.php');
 
 ?>
-          <!-- <script>window.location.replace("http://localhost/JOYM/dashboard/dashboard/user.php");</script> -->
           <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <i class="material-icons">close</i>
