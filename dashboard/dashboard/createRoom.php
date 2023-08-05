@@ -3,7 +3,7 @@
   ob_start();
 
   if($_SESSION['isLoggedIn'] != 'login'){
-    header('location: ../../login/loginForm.php');
+    header('location: ../../loginForm.php');
 }
   $banner_text = "Create Room";
   include("./Header/header.php");

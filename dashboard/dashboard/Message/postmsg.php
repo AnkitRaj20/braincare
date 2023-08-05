@@ -8,8 +8,10 @@ $ip=$_POST['ip'];
 $name=$_POST['name'];
 echo $name;
 echo $msg;
+date_default_timezone_set("Asia/Calcutta");
+$date = date("d-m-Y h:i:sa");
 
-$sql="INSERT INTO `msgs` ( `msg`, `room`,`name`, `ip`, `stime`) VALUES ('$msg', '$room','$name', '$ip', current_timestamp())";
+$sql="INSERT INTO `msgs` ( `msg`, `room`,`name`, `ip`, `stime`) VALUES ('$msg', '$room','$name', '$ip', '$date')";
 
 echo $sql;
 

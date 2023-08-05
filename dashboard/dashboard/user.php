@@ -3,7 +3,7 @@
   ob_start();
 
   if($_SESSION['isLoggedIn'] != 'login'){
-    header('location: ../../login/loginForm.php');
+    header('location: ../../loginForm.php');
 }
   $banner_text = "User Profile";
   include("./Header/header.php");
@@ -227,7 +227,7 @@ else
                   <h4 class="card-title"> <b>Name: </b> <?php echo $_SESSION['name']; ?> </h4>
                   <h4 class="card-title"> <b>Email: </b> <?php echo $_SESSION['email']; ?> </h4>
                   <p class="card-description">
-                   Not Me, But You
+                  Keep Your Brain Healthy
                   </p>
                   <!-- <a href="javascript:;" class="btn btn-primary btn-round">Follow</a> -->
                  

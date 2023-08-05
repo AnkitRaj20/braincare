@@ -1,8 +1,9 @@
 <?php
 ob_start();
 $roomname = $_GET['roomname'];
+
 if ($_SESSION['isLoggedIn'] != 'login') {
-    header('location: ../../login/loginForm.php');
+    header('location: ../../loginForm.php');
 }
 $banner_text = "ChatRoom and Event Links";
 include("./Header/header.php");
@@ -50,16 +51,17 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
                                 </div>
 
                                 <div class="message darker">
-                            <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJ2nq_kCjAnFNypd6rm42wlBurO0TzAkZDQ&usqp=CAU" alt="Avatar" class="right" style="width:100%;">
+                                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJ2nq_kCjAnFNypd6rm42wlBurO0TzAkZDQ&usqp=CAU" alt="Avatar" class="right" style="width:100%;">
                             <p>Hey! I'm fine. Thanks for asking!</p>
                             <span class="time-left">11:01</span> -->
-                        </div>
+                                </div>
 
                             </div>
                             <div class="col-md-12 mt-4">
                                 <div class="form-group">
                                     <label class="bmd-label-floating">Type Your Message</label>
                                     <input type="text" name="message" id="message" class="form-control" required>
+                                    <span id="messageSpan"></span>
                                 </div>
                                 <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Send</button>
 
@@ -68,15 +70,15 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
                     </div>
                 </div>
             </div>
-<!-- ======MEETINGS LINKS================ -->
+            <!-- ======MEETINGS LINKS================ -->
 
-<?php 
-$sql = "SELECT * FROM meetings where usedFor='$roomname'";
-$result = $conn->query($sql);
-$num = mysqli_num_rows($result);
-?>
+            <?php
+            $sql = "SELECT * FROM meetings where usedFor='$roomname'";
+            $result = $conn->query($sql);
+            $num = mysqli_num_rows($result);
+            ?>
 
-<div class="col-md-12">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title ">Meeting Links</h4>
@@ -154,11 +156,61 @@ $num = mysqli_num_rows($result);
 </div>
 
 
-     
+
 
 
 
 <!-- <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+
+<!-- VALIDATION -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#messageSpan').hide();
+
+        var message_err = false;
+
+         // Message validation start
+        $('#message').keyup(function() {
+            message_check();
+        });
+
+        function message_check() {
+            var val = $('#message').val();
+            if (val.length == 0) {
+                $('#messageSpan').show();
+                $('#messageSpan').html('Please fill the field');
+                $('#messageSpan').focus();
+                $('#messageSpan').css("color", "red");
+                $('#message').css("border-color", "red");
+                // $('#submit').hide();
+                message_err = true;
+                
+                return false;
+            } else {
+                // $('#submit').show();
+                $('#messageSpan').hide();
+                $('#message').css("border-color", "");
+              
+                
+            }
+        }
+        //Message validation ends
+
+
+        $('#submit').click(function() {
+            message_err = false;
+            message_check();
+             if ((message_err == false)) {
+               
+                return true
+            } else {
+             
+                return false;
+            }
+        });
+
+    });
+</script>
 
 <script type="text/javascript">
     // ======Check for new msg every 1 second======
@@ -178,6 +230,8 @@ $num = mysqli_num_rows($result);
     $("#submit").click(function() {
         //    If user sends the msg
         var clientmsg = $('#message').val();
+        
+        if($('#message').val() != ''){
         // Clearing the input field
         $('#message').val('');
 
@@ -193,8 +247,10 @@ $num = mysqli_num_rows($result);
 
             }
         return false;
+        }
     });
 
+    
 
     //============== Enter to submit========
     // Get the input field
@@ -211,6 +267,9 @@ $num = mysqli_num_rows($result);
         }
     });
 </script>
+
+
+
 
 
 <?php

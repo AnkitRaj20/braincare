@@ -13,21 +13,22 @@ include "../../../connection/config.php";
  if(mysqli_num_rows($result)>0){
     while($row=mysqli_fetch_assoc($result)){
         $name = $row['name'];
-        $newDate = date("d-m-Y", strtotime($row['stime']));
+        date_default_timezone_set("Asia/Calcutta"); 
+        $newDate = date("d-m-Y h:i:a", strtotime($row['stime']));
 
         if($name == $_SESSION['name']){
             $res= $res . '<div class="message darker">';
             // $res = $res . $row['ip'];
-            $res = $res . $name;
+            $res = $res ." <p class='sender'>" . $name." </p>";
             $res = $res ." <p>". $row['msg'];
             $res = $res ." </p><span class='time-right'>" . $newDate . "</span></div>";
         }
         else{
             $res= $res . '<div class="message">';
             // $res = $res . $row['ip'];
-            $res = $res . $name;
+            $res = $res ." <p class='sender'>" . $name . " </p>";
             $res = $res ."  <p>". $row['msg'];
-            $res = $res ." </p><span class='time-right'>" . $newDate . "</span></div>";
+            $res = $res ." </p><span class='time-left'>" . $newDate . "</span></div>";
         }
        
 

@@ -3,7 +3,7 @@
   ob_start();
 
   if($_SESSION['isLoggedIn'] != 'login'){
-    header('location: ../../login/loginForm.php');
+    header('location: ../../loginForm.php');
 }
   $banner_text = "Chat";
   include("./Header/header.php");
@@ -41,7 +41,6 @@
 header('location:http://localhost/braincare/dashboard/user.php');
 
 ?>
-          <!-- <script>window.location.replace("http://localhost/JOYM/dashboard/dashboard/user.php");</script> -->
           <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <i class="material-icons">close</i>

@@ -185,7 +185,7 @@ include("../../connection/config.php");
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./stories.php">
+            <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=0">
               <i class="material-icons">book</i>
               <p>Stories</p>
             </a>
@@ -284,7 +284,7 @@ include("../../connection/config.php");
                   
                   <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="<?php echo $actual_link . $dir_path . '/logout/logout.php'; ?>">Log out</a>
+                  <a class="dropdown-item" href="<?php echo $actual_link . $dir_path . '/dashboard/dashboard/logout/logout.php'; ?>">Log out</a>
                 </div>
               </li>
             </ul>
