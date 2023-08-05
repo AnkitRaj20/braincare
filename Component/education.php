@@ -62,6 +62,25 @@
                  </p>
              </div>
 
+             <!-- 5th -->
+            
+             <div class="col-lg-7">
+                 <h1 class="display-5 mb-0">Social Isolation and Loneliness</h1>
+                 <p class="text-body fst-italic mb-4">
+
+                 Loneliness is a universal human experience, yet its prevalence has reached alarming proportions in recent years. Studies have shown that approximately one in three adults in many developed countries report feeling lonely. This phenomenon, often referred to as the "loneliness epidemic," has far-reaching consequences that extend well beyond momentary discomfort.
+                 <br>
+                <b>Effects on Mental Health:</b> It gives Depression and Anxiety
+                 lower your Self-Esteem and Self-Worth and in worst case it also gives you Suicidal Idea.
+                 </p>
+             </div>
+
+             <div class="col-lg-5" style="min-height: 20rem;">
+                 <div class="position-relative h-100">
+                     <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/depression.jpeg" style="object-fit: cover;">
+                 </div>
+             </div>
+
          </div>
      </div>
  </div>

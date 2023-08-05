@@ -7,7 +7,8 @@ $sql = "CREATE TABLE contact (
     name varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     subject varchar(255)    NOT NULL,
-    message text 
+    message text,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
 if($conn -> query ($sql)=== true){

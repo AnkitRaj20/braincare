@@ -62,7 +62,7 @@ session_start();
             <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
         <input type="submit" name="submit" class="btn btn-primary btn-block btn-lg" value="Send Mail">   <br>           
-        <div class="text-center small">Don't have an account? <a href="../register/registerform.php">Sign up</a></div>
+        <div class="text-center small">Don't have an account? <a href="./registerForm.php">Sign up</a></div>
     </form>			
 </div>
 </section>

@@ -42,7 +42,7 @@
                     </div>
                     <h4 class="text-body fst-italic mb-4">Togetherall is a safe, online community to share feelings anonymously and get support to improve mental health and wellbeing.  In the community people support each other.</h4>
 
-                    <p class="mb-4">Voicing how you feel in specifics will assist in putting problems in perspective and also boost your morale and feeling of inclusion and support.</p>
+                    <p class="mb-4">BrainCare is a comprehensive and compassionate online platform dedicated to mental health support and well-being. It serves as a safe space for individuals to share their personal stories, connect with anonymous peers, and access valuable resources to improve their mental health. The website's mission is to create a virtual community that fosters understanding, empathy, and growth, ultimately promoting mental wellness for all.</p>
                     <div class="row g-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Awareness</h5>
@@ -56,7 +56,7 @@
 
                         </div>
                     </div>
-                    <a href="http://localhost/braincare/dashboard/user.php" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Join Community</a>
+                    <a href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=all" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Join Community</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
