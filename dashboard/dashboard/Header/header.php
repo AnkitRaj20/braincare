@@ -185,7 +185,7 @@ include("../../connection/config.php");
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=0">
+            <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=0&data=5">
               <i class="material-icons">book</i>
               <p>Stories</p>
             </a>

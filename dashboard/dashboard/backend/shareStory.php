@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql);
 
 if($result){
     echo "Success";
-    header("location: ../stories.php" );
+    header("location: ../stories.php?start=0&data=5" );
 }else{
     echo "Error".$conn->error;
 }

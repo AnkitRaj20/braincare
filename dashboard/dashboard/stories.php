@@ -3,7 +3,10 @@ session_start();
 ob_start();
 
 $start = $_GET['start'];
+$data = $_GET['data'];
 echo $start;
+echo $data;
+
 
 if ($_SESSION['isLoggedIn'] != 'login') {
     header('location: ../../loginForm.php');
@@ -30,7 +33,7 @@ $id = $_SESSION['id'];
                         <?php
                        
                         
-                        $data = 5;
+                        // $data = 5;
 
                         $sql = "SELECT * FROM stories ORDER BY id DESC LIMIT $start,$data ";
                         $result = mysqli_query($conn, $sql);
@@ -50,7 +53,6 @@ $id = $_SESSION['id'];
                                     <div class="card-header topic">
                                         <b>
                                         <?php echo $row['topic'] ?>
-                                        <?php echo $row['id'] ?>
                                         </b>
                                     </div>
                                     <div class="card-body">
@@ -83,6 +85,31 @@ $id = $_SESSION['id'];
                     
                         ?>
                         <div class="col-md-12">
+                        <!-- <div class="btn-group dropdown">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Number Of Story 
+  </button>
+  <div class="dropdown-menu">
+    <input type="button" value="5" onclick="next()" id="page" >
+    <input type="button" value="10" onclick="next()" id="page" >
+    <input type="button" value="15" onclick="next()" id="page" >
+    <input type="button" value="20" onclick="next()" id="page" >
+</div>
+</div> -->
+
+<div class="dropdown show">
+  <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Number Of Stories
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=<?php echo $start; ?>&data=5">5</a>
+    <a class="dropdown-item" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=<?php echo $start; ?>&data=10">10</a>
+    <a class="dropdown-item" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=<?php echo $start; ?>&data=15">15</a>
+    <a class="dropdown-item" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=<?php echo $start; ?>&data=20">20</a>
+  </div>
+</div>
+
 
                             <button type="button" onclick=next()  id="btn" value="Next" class="btn  btn-primary pull-right">Next</button>
                         <!-- </div>
@@ -106,8 +133,11 @@ $id = $_SESSION['id'];
         console.log("clicked");
         const value="<?php echo $value; ?>";
         const num10="<?php echo $num10; ?>";
-        // window.location.href("http://localhost/braincare/dashboard/dashboard/stories.php?start=10")
+        const data="<?php echo $data; ?>";
+       
         const btn = document.getElementById('btn');
+        const page = document.getElementById('page');
+
 
         console.log("value"+value)
         console.log("temp"+num10)
@@ -128,7 +158,11 @@ $id = $_SESSION['id'];
 
 btn.addEventListener('click', function onClick() {
   // ⛔️ TypeError: window.location.href is not a function
-  window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start='+value);
+  window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start='+value+'&data='+data);
+});
+page.addEventListener('click', function onClick() {
+  // ⛔️ TypeError: window.location.href is not a function
+  window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start='+value+'&data='+data);
 });
     }
 
@@ -139,11 +173,22 @@ btn.addEventListener('click', function onClick() {
         const prev_val="<?php echo $prev_val; ?>";
         const start="<?php echo $start; ?>";
         const num10="<?php echo $num10; ?>";
+        const data="<?php echo $data; ?>";
+
+        if(start < 0){
+            window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start=0+&data='+data);
+        }
 
         if(start == 0){
             // alert("ok")
             document.getElementById("prev").disabled = true;
-        }else if(prev_val < num10){
+        }else if(data == 5 && start > data){
+            document.getElementById("prev").disabled = true;
+        }else if(data > 5 && start < data){
+            document.getElementById("prev").disabled = true;
+
+        }
+        else if(prev_val < num10){
                 // alert("small"+prev_val+" "+num10)
             document.getElementById("prev").disabled = false;
         }
@@ -156,7 +201,7 @@ btn.addEventListener('click', function onClick() {
 
         prev_btn.addEventListener('click', function onClick() {
   // ⛔️ TypeError: window.location.href is not a function
-  window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start='+prev_val);
+  window.location.assign('http://localhost/braincare/dashboard/dashboard/stories.php?start='+prev_val+'&data='+data);
 });
 
     }
