@@ -41,8 +41,8 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
                     </div>
                     <div class="msgs">
                         <div class="card-body">
-                            <div data-bs-spy="scroll" data-bs-smooth-scroll="true" class=" scroll ">
-
+                            <div data-bs-spy="scroll" data-bs-smooth-scroll="true" class=" scroll   overflow-x-scroll ">
+                            <!-- <div data-bs-spy="scroll" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scroll scrollspy-example bg-light p-3 rounded-2" tabindex="0"> -->
 
                                 <div class="message">
                                     <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf-bO3uHEFkNpmTuytSRFBLu5pG3f0MTg-9g&usqp=CAU" alt="Avatar" style="width:100%;">
@@ -169,7 +169,7 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
 
         var message_err = false;
 
-         // Message validation start
+        // Message validation start
         $('#message').keyup(function() {
             message_check();
         });
@@ -184,14 +184,14 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
                 $('#message').css("border-color", "red");
                 // $('#submit').hide();
                 message_err = true;
-                
+
                 return false;
             } else {
                 // $('#submit').show();
                 $('#messageSpan').hide();
                 $('#message').css("border-color", "");
-              
-                
+
+
             }
         }
         //Message validation ends
@@ -200,11 +200,11 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
         $('#submit').click(function() {
             message_err = false;
             message_check();
-             if ((message_err == false)) {
-               
+            if ((message_err == false)) {
+
                 return true
             } else {
-             
+
                 return false;
             }
         });
@@ -230,27 +230,27 @@ if ($q == "roomname=boys" || $q == "roomname=girls" || $q == "roomname=others") 
     $("#submit").click(function() {
         //    If user sends the msg
         var clientmsg = $('#message').val();
-        
-        if($('#message').val() != ''){
-        // Clearing the input field
-        $('#message').val('');
 
-        $.post("./Message/postmsg.php", {
-                text: clientmsg,
-                room: '<?php echo $roomname ?>',
-                ip: "<?php echo $_SERVER['REMOTE_ADDR'] ?>",
-                name: "<?php echo $_SESSION['name'] ?>"
-            }),
+        if ($('#message').val() != '') {
+            // Clearing the input field
+            $('#message').val('');
 
-            function(data, status) {
-                document.getElementsByClassName('scroll')[0].innerHTML = data;
+            $.post("./Message/postmsg.php", {
+                    text: clientmsg,
+                    room: '<?php echo $roomname ?>',
+                    ip: "<?php echo $_SERVER['REMOTE_ADDR'] ?>",
+                    name: "<?php echo $_SESSION['name'] ?>"
+                }),
 
-            }
-        return false;
+                function(data, status) {
+                    document.getElementsByClassName('scroll')[0].innerHTML = data;
+
+                }
+            return false;
         }
     });
 
-    
+
 
     //============== Enter to submit========
     // Get the input field

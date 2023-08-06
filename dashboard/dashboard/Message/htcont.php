@@ -4,7 +4,7 @@ session_start();
 include "../../../connection/config.php";
  $room = $_POST['room'];
 
- $sql ="SELECT * FROM msgs WHERE room='$room'";
+ $sql ="SELECT * FROM msgs WHERE room='$room' ORDER BY sno DESC";
  $id = $_SESSION['id'];
 
  $res="";

@@ -4,7 +4,12 @@
 
   if($_SESSION['isLoggedIn'] != 'login'){
     header('location: ../../loginForm.php');
-}
+
+    
+  }
+  
+ 
+
   $banner_text = "User Profile";
   include("./Header/header.php");
 
@@ -13,11 +18,10 @@
 
   $id = $_SESSION['id'];
   $sql = "SELECT * FROM register where id = $id";
-  // echo $sql;
 
   $result = $conn->query($sql);
   $num = mysqli_num_rows($result);
-  // echo $num;
+  
   
   if(isset($_POST['submit'])){
     // $id = $_GET['id'];

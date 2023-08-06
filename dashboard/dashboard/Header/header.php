@@ -11,12 +11,12 @@ include("../../connection/config.php");
           $dir_path = '';
         }
     
+        // Getting the URL
       $url =  $_SERVER['SERVER_NAME']. $_SERVER['REQUEST_URI'];
-      // echo $url;
       $id = $_SESSION['id'];
       
     $sql= "SELECT * FROM register where id= $id";
-    // echo $sql;
+   
     $result= mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result);
 
@@ -30,15 +30,10 @@ include("../../connection/config.php");
       }
     }
 
-  
-//     if($url == $_SERVER['SERVER_NAME']."/dashboard/dashboard/room.php?roomname=boys" && $_SESSION['gender'] ==='male' )
-//     {
-//       echo "working";
-//       header("location:  $_SERVER[SERVER_NAME].'/dashboard/dashboard/room.php?roomname=girls'");
-//     }
-// else{
-//   echo "not working";
-// }
+    $purl = parse_url($url);
+    $q = $purl['path'];
+    $q1 = "roomname=" . $_SESSION['gender'];
+    $q2 = "roomname=" . $occupation;
     
 ?>
       
@@ -87,7 +82,7 @@ include("../../connection/config.php");
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="green" data-image="../assets/img/sidebar-1.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -105,8 +100,7 @@ include("../../connection/config.php");
               <p>Dashboard</p>
             </a>
           </li> -->
-          <!-- <li class="nav-item active "> -->
-          <li class="nav-item">
+          <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/user.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./user.php">
               <i class="material-icons">person</i>
               <p>User Profile</p>
@@ -114,19 +108,19 @@ include("../../connection/config.php");
           </li>
 
           <?php if($userType === 'admin'){ ?>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/allUsers.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./allUsers.php">
               <i class="material-icons">content_paste</i>
               <p>All Users</p>
             </a>
           </li>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/allMessages.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./allMessages.php">
               <i class="material-icons">forum</i>
               <p>Feedback/Contact Messages</p>
             </a>
           </li>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/createRoom.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./createRoom.php">
               <i class="material-icons">home</i>
               <p>Create Room </p>
@@ -135,14 +129,14 @@ include("../../connection/config.php");
 
           <?php } ?>
 
-          <li class="nav-item ">
+           <li class="nav-item <?php if($url == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/room.php?roomname=all') {echo 'active';}  ?> ">
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=all">
               <i class="material-icons">chat</i>
               <p>Group Chat </p>
             </a>
           </li>
           <?php if($occupation == 'student') { ?>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($url == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/room.php?roomname=student') {echo 'active';} ?> ">
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=student">
               <i class="material-icons">school</i>
               <p>Student </p>
@@ -152,7 +146,8 @@ include("../../connection/config.php");
             if($gender == 'boys'){
           
           ?>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($url == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/room.php?roomname=boys') {echo 'active';} ?> ">
+  
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=boys">
               <i class="material-icons">boys</i>
               <p>Boys</p>
@@ -161,7 +156,7 @@ include("../../connection/config.php");
           <?php } 
           if($gender == 'girls'){
           ?>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($url == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/room.php?roomname=girls') {echo 'active';}  ?> ">
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=girls">
               <i class="material-icons">girls</i>
               <p>Girls</p>
@@ -170,7 +165,7 @@ include("../../connection/config.php");
           <?php }  
             if($gender == 'others'){
           ?>
-          <li class="nav-item">
+           <li class="nav-item <?php if($url == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/room.php?roomname=transgender') {echo 'active';}  ?> ">
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/room.php?roomname=transgender">
               <i class="material-icons">transgender</i>
               <p>Transgender</p>
@@ -178,32 +173,32 @@ include("../../connection/config.php");
           </li>
           <?php } ?>
 
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/shareStory.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./shareStory.php">
               <i class="material-icons">create</i>
               <p>Share Stories</p>
             </a>
           </li>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/stories.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="http://localhost/braincare/dashboard/dashboard/stories.php?start=0&data=5">
               <i class="material-icons">book</i>
               <p>Stories</p>
             </a>
           </li>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/createMeeting.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./createMeeting.php">
               <i class="material-icons">event</i>
               <p>Create Events</p>
             </a>
           </li>
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/viewMeeting.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="./viewMeeting.php">
               <i class="material-icons">links</i>
               <p>Join Events</p>
             </a>
           </li>
           
-          <!-- <li class="nav-item ">
+           <!-- <li class="nav-item  ">
             <a class="nav-link" href="./typography.php">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
@@ -211,7 +206,7 @@ include("../../connection/config.php");
           </li> -->
           
           
-          <li class="nav-item ">
+           <li class="nav-item <?php if($q == $_SERVER['SERVER_NAME'].$dir_path.'/dashboard/dashboard/logout/logout.php') {echo 'active';}  ?> ">
             <a class="nav-link" href="<?php echo $actual_link . $dir_path . '/dashboard/dashboard/logout/logout.php'; ?>">
               <i class="material-icons">logout</i>
               <p>Log Out</p>
