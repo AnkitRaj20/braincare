@@ -57,7 +57,7 @@
     color: #999;
   }
   
-  .scroll{
+  .msgs .scroll{
     height: 380px;
     overflow-y: scroll;
 }

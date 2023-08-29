@@ -50,8 +50,12 @@ include("./Header/header.php");
             </div>
             <div class="col-xl-6 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
                 <h1 class="text-center m-2">Join Us</h1>
-                <form action="./Backend/register.php" method="POST">
+                <form action="./Backend/register.php" method="POST" enctype="multipart/form-data">
                     <div class="row g-3">
+                        <div class="col-12">
+                            <input type="file" class="form-control border-0 bg-light px-4" name="file" id="file" placeholder="Profile Image" style="height: 55px;">
+                            <span id="profileImageSpan"> 
+                        </div>
                         <div class="col-4">
                             <input type="text" class="form-control border-0 bg-light px-4" name="firstName" id="firstName" placeholder="First Name" style="height: 55px;"required>
                             <span id="firstNameSpan"> 

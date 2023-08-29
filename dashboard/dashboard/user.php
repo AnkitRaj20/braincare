@@ -92,6 +92,10 @@ else
                         {
                            $_SESSION['name'] = $row['firstName']." ".$row['middleName']." ".$row['lastName'];
                            $_SESSION['gender'] = $row['gender'];
+                           $_SESSION['imagePath'] = $row['image'];
+
+                           if(!$_SESSION['imagePath'])
+                           $_SESSION['imagePath'] = 'upload/avatar.png';
                           ?>
                           <div class="row">
                         
@@ -221,11 +225,11 @@ else
             </div>
             <div class="col-md-4">
               <div class="card card-profile">
-                <!-- <div class="card-avatar">
+                <div class="card-avatar">
                   <a href="javascript:;">
-                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                    <img class="img" src="../../Backend/<?php echo $_SESSION['imagePath']?>" />
                   </a>
-                </div> -->
+                </div>
                 <div class="card-body">
                   <h6 class="card-category text-dark"><b> <u> Volunteer </u></b></h6>
                   <h4 class="card-title"> <b>Name: </b> <?php echo $_SESSION['name']; ?> </h4>

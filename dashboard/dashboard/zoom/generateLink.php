@@ -68,8 +68,10 @@ if(isset($result->id)){
 
   if ($result = mysqli_query($conn, $sql)) {
     echo "Returned rows are: " . mysqli_num_rows($result);
+   
     ?>
     <script>
+       window.location.href = 'http://localhost/braincare/dashboard/dashboard/viewMeeting.php';
         console.log("working");
         alert("working");
     </script>
